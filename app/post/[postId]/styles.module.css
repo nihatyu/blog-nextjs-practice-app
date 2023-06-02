@@ -1,0 +1,101 @@
+.blogContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cardImage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.cardImage img{
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.title{
+    font-size: 48px;
+    margin-top: 8px;
+}
+
+.container404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .title404 {
+    font-size: 64px;
+    color: #ff4d4f;
+    margin-bottom: 16px;
+  }
+  
+  .description404 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+  
+  .meteor {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #ff4d4f;
+    transform: translateX(-50%);
+    animation: meteorFall 2s linear infinite;
+  }
+  
+  @keyframes meteorFall {
+    0% {
+      transform: translateX(-50%) translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  .link404 {
+    font-size: 18px;
+    color: #1890ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link404:hover {
+    color: #40a9ff;
+  }

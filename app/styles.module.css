@@ -1,0 +1,107 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr min(960px, 90%) 1fr;
+    grid-template-rows: 72px minmax(calc(100vh - 144px), auto) 72px;
+}
+
+.container > * {
+    grid-column: 2;
+}
+
+.blogsContainer > *:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* Loading.module.css */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  .spinner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .spinner:before,
+  .spinner:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .spinner:before {
+    width: 100px;
+    height: 100px;
+    border: 8px solid transparent;
+    border-top-color: #ffeb3b;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .spinner:after {
+    width: 150px;
+    height: 150px;
+    border: 8px solid transparent;
+    border-top-color: #ff5722;
+    animation: rotate-reverse 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-reverse {
+    0% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .text {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .loading:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ffeb3b, #2196f3, #ff5722, #4caf50);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+  }
+  
